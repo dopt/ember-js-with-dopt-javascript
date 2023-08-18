@@ -1,5 +1,6 @@
 import EmpressApplicationRoute from 'empress-blog/routes/application';
 import { inject as service } from '@ember/service';
+import { Dopt } from '@dopt/javascript';
 
 export default class ApplicationRoute extends EmpressApplicationRoute {
   @service metrics;
@@ -16,6 +17,11 @@ export default class ApplicationRoute extends EmpressApplicationRoute {
       const hostname = 'blog.emberjs.com';
 
       this.metrics.trackPage({ page, title, hostname });
+    });
+
+    this.dopt = new Dopt({
+      userId: 'foo',
+      apiKey: 'bar',
     });
   }
 }

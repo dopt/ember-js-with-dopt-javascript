@@ -23,6 +23,9 @@
     "start": "ember serve",
     "test": "ember test"
   },
+  "dependencies": {
+    "@dopt/javascript": "3.3.0"
+  },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.4.0",
