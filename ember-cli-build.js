@@ -5,19 +5,6 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    autoImport: {
-      webpack: {
-        resolve: {
-          alias: {
-            '@dopt/javascript': path.resolve(
-              __dirname,
-              './node_modules/@dopt/javascript/dist/index.esm.js'
-            ),
-          },
-        },
-      },
-    },
-
     // Theme options are coy, dark, funky, okaidia, solarizedlight, tomorrow,
     // and twilight. Remove the `theme` attribute to use the default theme.
     'ember-prism': {
